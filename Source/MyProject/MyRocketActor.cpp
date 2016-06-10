@@ -26,9 +26,6 @@ AMyRocketActor::AMyRocketActor() :
 	MeshComponent->SetStaticMesh(ConstructorStatics.DudeMesh.Object);
 	MeshComponent->AttachTo(RootComponent);
 	MeshComponent->SetCollisionProfileName(UCollisionProfile::BlockAll_ProfileName);
-	//MeshComponent->SetSimulatePhysics(false);
-	//MeshComponent->SetMobility(EComponentMobility::Movable);
-	//MeshComponent->SetEnableGravity(false);
 	MeshComponent->SetNotifyRigidBodyCollision(true);
 	RootComponent = MeshComponent;
 
@@ -51,16 +48,6 @@ void AMyRocketActor::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
 
-}
-
-void AMyRocketActor::Shoot(FRotator& ShootDirection)
-{
-	//DetachRootComponentFromParent();
-	//SetLifeSpan(2.0);
-	//_shootDirection = ShootDirection.Vector();
-	//MeshComponent->SetSimulatePhysics(true);
-	//MeshComponent->WakeRigidBody();
-	//MeshComponent->AddImpulse(_shootDirection * MeshComponent->GetMass() * BOMB_STRENGTH);
 }
 
 AMyRocketActor* AMyRocketActor::SpawnActor(AActor *owner)

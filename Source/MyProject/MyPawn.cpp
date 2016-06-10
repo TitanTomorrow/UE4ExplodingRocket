@@ -23,9 +23,6 @@ AMyPawn::AMyPawn()
 	MeshComponent->SetStaticMesh(ConstructorStatics.DudeMesh.Object);
 	MeshComponent->AttachTo(RootComponent);
 	MeshComponent->SetCollisionProfileName(UCollisionProfile::Pawn_ProfileName);
-	//MeshComponent->SetSimulatePhysics(true);
-	//MeshComponent->SetMobility(EComponentMobility::Movable);
-	//MeshComponent->SetEnableGravity(false);
 
 	MovementComponent = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("PawnMovement"));
 	MovementComponent->SetUpdatedComponent(MeshComponent);
